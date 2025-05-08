@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Simple Sound Tools - Random Containers for Reaper" commit="d4b82b1df0358d01e6fbe77ac5d70c151c90a899">
-  <category name="Example">
-    <reapack name="cfillion_Hello world.lua" type="script" desc="Hello world">
+<index version="1" name="Simple Sound Tools - Random Containers for Reaper" commit="2187e016b97f759dc2dc1eee18efff3aa7f4a92e">
+  <category name="Random Containers">
+    <reapack name="Simple-Sound-Tools_Random-Containers.lua" type="script" desc="Simple Sound Tools - Random Containers for Reaper">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 This is an example of a package file. It installs itself as a ReaScript that does nothing but show "Hello World!" in REAPER's scripting console.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Packages may also include additional files specified using the @provides tag.\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 This text is the documentation shown when using ReaPack's "About this package" feature. {\field{\*\fldinst{HYPERLINK "https://commonmark.org/"}}{\fldrslt{\ul
-Markdown
-}}}
- {\i formatting} is supported.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 This script brings the essential functionality of audio middleware to Reaper\par}
 }
 ]]></description>
       </metadata>
-      <version name="1.0" author="cfillion" time="2021-01-04T23:30:32Z">
-        <source main="main">https://github.com/cfillion/reapack-repository-template/raw/58a3e39ba95bd0f35846aa1f39aa4cb2574295e1/Example/cfillion_Hello%20world.lua</source>
+      <version name="1.0 - BETA" author="Simple Sound Tools" time="2025-05-08T20:56:23Z">
+        <source main="main">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/2187e016b97f759dc2dc1eee18efff3aa7f4a92e/Random%20Containers/Simple-Sound-Tools_Random-Containers.lua</source>
       </version>
     </reapack>
   </category>

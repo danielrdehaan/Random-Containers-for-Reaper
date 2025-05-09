@@ -37,8 +37,6 @@ This REAPER script requires:
  - Install script through ReaPack.
  - Repository Link: [https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/master/index.xml](https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/master/index.xml)
 
---
-
 # Full Installation Instructions:
 
 1. Download and install ReaPack from [https://reapack.com](https://reapack.com). 

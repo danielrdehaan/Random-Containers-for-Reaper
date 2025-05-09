@@ -1,4 +1,4 @@
--- @description Simple Sound Tools - Random Containers for Reaper
+-- @description Random Containers for Reaper
 -- @author Simple Sound Tools
 -- @version 1.9 - BETA
 -- @about

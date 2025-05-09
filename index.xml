@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Simple Sound Tools - Random Containers for Reaper" commit="f853bdddf481590fd6cf03ab23ec411e20309e67">
+<index version="1" name="Simple Sound Tools - Random Containers for Reaper" commit="91f40e4c2806d1233a93d64871ee098f73071fc5">
   <category name="Random Containers">
-    <reapack name="Simple-Sound-Tools_Random-Containers.lua" type="script" desc="Simple Sound Tools">
+    <reapack name="Simple-Sound-Tools_Random-Containers.lua" type="script" desc="Random Containers for Reaper">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}

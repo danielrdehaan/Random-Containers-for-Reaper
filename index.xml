@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Simple Sound Tools - Random Containers for Reaper" commit="0b3221dac84f1a81db6ed58d613d02aaa9a43c32">
+<index version="1" name="Simple Sound Tools - Random Containers for Reaper" commit="36c57b88c40593ce87f2f595e04a50e506743c6b">
   <category name="Random Containers">
     <reapack name="Simple-Sound-Tools_Random-Containers.lua" type="script" desc="Simple Sound Tools - Random Containers for Reaper">
       <metadata>
@@ -18,6 +18,11 @@
         <source main="main">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/0b3221dac84f1a81db6ed58d613d02aaa9a43c32/Random%20Containers/Simple-Sound-Tools_Random-Containers.lua</source>
         <source file="../Fonts/Roboto/Roboto-Black.ttf">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/0b3221dac84f1a81db6ed58d613d02aaa9a43c32/Fonts/Roboto/Roboto-Black.ttf</source>
         <source file="../Fonts/Roboto/Roboto-Medium.ttf">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/0b3221dac84f1a81db6ed58d613d02aaa9a43c32/Fonts/Roboto/Roboto-Medium.ttf</source>
+      </version>
+      <version name="1.0 - BETA" author="Simple Sound Tools" time="2025-05-09T17:58:28Z">
+        <source main="main">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/36c57b88c40593ce87f2f595e04a50e506743c6b/Random%20Containers/Simple-Sound-Tools_Random-Containers.lua</source>
+        <source file="../Fonts/Roboto/Roboto-Black.ttf">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/36c57b88c40593ce87f2f595e04a50e506743c6b/Fonts/Roboto/Roboto-Black.ttf</source>
+        <source file="../Fonts/Roboto/Roboto-Medium.ttf">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/36c57b88c40593ce87f2f595e04a50e506743c6b/Fonts/Roboto/Roboto-Medium.ttf</source>
       </version>
     </reapack>
   </category>

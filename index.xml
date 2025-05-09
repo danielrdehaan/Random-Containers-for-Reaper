@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <index version="1" name="Simple Sound Tools" commit="fc585b294e6ef35b60127672429abb1e4fb81061">
   <category name="Random Containers">
-    <reapack name="Simple-Sound-Tools_Random-Containers.lua" type="script" desc="TEST Random Containers for Reaper">
+    <reapack name="Simple-Sound-Tools_Random-Containers.lua" type="script" desc="Random Containers for Reaper">
       <metadata>
         <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}

@@ -11,10 +11,10 @@
 }
 ]]></description>
       </metadata>
-      <version name="1.1 - BETA" author="Simple Sound Tools" time="2025-05-08T20:56:23Z">
+      <version name="1.2 - BETA" author="Simple Sound Tools" time="2025-05-08T20:56:23Z">
         <source main="main">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/2187e016b97f759dc2dc1eee18efff3aa7f4a92e/Random%20Containers/Simple-Sound-Tools_Random-Containers.lua</source>
       </version>
-      <version name="1.0 - BETA" author="Simple Sound Tools" time="2025-05-09T17:48:28Z">
+      <version name="1.2 - BETA" author="Simple Sound Tools" time="2025-05-09T17:48:28Z">
         <source main="main">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/0b3221dac84f1a81db6ed58d613d02aaa9a43c32/Random%20Containers/Simple-Sound-Tools_Random-Containers.lua</source>
         <source file="../Fonts/Roboto/Roboto-Black.ttf">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/0b3221dac84f1a81db6ed58d613d02aaa9a43c32/Fonts/Roboto/Roboto-Black.ttf</source>
         <source file="../Fonts/Roboto/Roboto-Medium.ttf">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/0b3221dac84f1a81db6ed58d613d02aaa9a43c32/Fonts/Roboto/Roboto-Medium.ttf</source>

@@ -44,6 +44,38 @@ Packaging Documentation
 https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/master/index.xml
 }}}
 \par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Requirements:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 This REAPER script requires:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab REAPER 7.20+ (could work with older versions but has not been tested)\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab ReaPack\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab SWS/S&M REAPER extension\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab ReaImGUI\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Basic Installation:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Install script through ReaPack.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Repository Link: {\field{\*\fldinst{HYPERLINK "https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/master/index.xml"}}{\fldrslt{\ul
+https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/master/index.xml
+}}}
+\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 --\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Full Installation Instructions:\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Install ReaPack:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 1.\tx360\tab Download and install ReaPack from {\field{\*\fldinst{HYPERLINK "https://reapack.com"}}{\fldrslt{\ul
+https://reapack.com
+}}}
+.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 2.\tx360\tab Restart REAPER after installing ReaPack.\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Note: Users of macOS Catalina or newer may need to click on "Allow Anyway" in System Preferences > Security & Privacy after launching REAPER once for ReaPack to load when installed for the first time. Restart REAPER after approving.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 3.\tx360\tab Open ReaPack from the menu bar Extensions > ReaPack > Browse Packages... and install the following extensions:\sa180\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab SWS/S&M extensions\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab ReaImGui: ReaScript binding for Dear ImGui\sa180\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 4.\tx360\tab Restart Reaper\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 5.\tx360\tab Import a new repository via ReaPack by choose from the menu bar Extensions > ReaPack > Import Repositories...\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 6.\tx360\tab Paste the following repository link in the resulting pop-up window and click "OK" https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/master/index.xml\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 7.\tx360\tab Browse for the newly imported repository via ReaPack by choosing from the menu bar Extensions > ReaPack > Browse Packages...\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 8.\tx360\tab Search for and install the "Simple Sound Tools - Random Containers for Reaper" package.\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Running Random Containers for Reaper\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 1.\tx360\tab Open REAPER's Action List and search for the action "Script: Simple-Sound-Tools_Random-Containers.lua"\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 2.\tx360\tab Assign a keyboard shortcut if desired.\sa180\par}
 }
 ]]></description>
   </metadata>

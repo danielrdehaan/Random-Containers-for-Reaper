@@ -1,11 +1,11 @@
 -- @description Simple Sound Tools - Random Containers for Reaper
 -- @author Simple Sound Tools
--- @version 1.6 - BETA
+-- @version 1.7 - BETA
 -- @about
 --   This script brings the essential functionality of audio middleware to Reaper
 -- @provides
 -- 		[nomain] Fonts/Roboto/*.ttf
---		[nomain] Data/Simple-Sound-Tools_Random-Container-Functions.dat	
+-- 		[nomain] Data/*.dat
 SCRIPT_FOLDER = 'Random Containers'
 r = reaper
 SEP = package.config:sub(1, 1)

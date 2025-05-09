@@ -41,15 +41,14 @@ This REAPER script requires:
 
 # Full Installation Instructions:
 
-## Install ReaPack:
 1. Download and install ReaPack from [https://reapack.com](https://reapack.com). 
 2. Restart REAPER after installing ReaPack.
 
 Note: Users of macOS Catalina or newer may need to click on "Allow Anyway" in System Preferences > Security & Privacy after launching REAPER once for ReaPack to load when installed for the first time. Restart REAPER after approving.
 
 3. Open ReaPack from the menu bar Extensions > ReaPack > Browse Packages... and install the following extensions:
-  - SWS/S&M extensions
-  - ReaImGui: ReaScript binding for Dear ImGui
+	- SWS/S&M extensions
+	- ReaImGui: ReaScript binding for Dear ImGui
 4. Restart Reaper
 5. Import a new repository via ReaPack by choose from the menu bar Extensions > ReaPack > Import Repositories...
 6. Paste the following repository link in the resulting pop-up window and click "OK"

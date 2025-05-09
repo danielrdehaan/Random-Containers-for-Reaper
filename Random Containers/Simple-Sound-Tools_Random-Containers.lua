@@ -4,8 +4,8 @@
 -- @about
 --   This script brings the essential functionality of audio middleware to Reaper
 -- @provides
--- 		[nomain] /Fonts/Roboto/*.ttf
---		[nomain] /Random Containers/Data/*.dat 	
+-- 		[nomain] Fonts/Roboto/*.ttf
+--		[nomain] Random Containers/Data/*.dat 	
 SCRIPT_FOLDER = 'Random Containers'
 r = reaper
 SEP = package.config:sub(1, 1)

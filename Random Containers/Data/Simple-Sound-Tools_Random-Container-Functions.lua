@@ -1,3 +1,4 @@
+-- @noindex
 --[[
   DRD_Random Container Editor.lua
   --------------------------------

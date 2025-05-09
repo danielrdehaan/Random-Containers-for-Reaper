@@ -11,7 +11,7 @@
 }
 ]]></description>
       </metadata>
-      <version name="1.0 - BETA" author="Simple Sound Tools" time="2025-05-08T20:56:23Z">
+      <version name="1.1 - BETA" author="Simple Sound Tools" time="2025-05-08T20:56:23Z">
         <source main="main">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/2187e016b97f759dc2dc1eee18efff3aa7f4a92e/Random%20Containers/Simple-Sound-Tools_Random-Containers.lua</source>
       </version>
     </reapack>

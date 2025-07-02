@@ -102,7 +102,7 @@ https://reapack.com
 {\pard \ql \f0 \sa0 \li360 \fi-360 5.\tx360\tab Import a new repository via ReaPack by choose from the menu bar Extensions > ReaPack > Import Repositories...\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 6.\tx360\tab Paste the following repository link in the resulting pop-up window and click "OK" https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/master/index.xml\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 7.\tx360\tab Browse for the newly imported repository via ReaPack by choosing from the menu bar Extensions > ReaPack > Browse Packages...\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 8.\tx360\tab Search for and install the "Simple Sound Tools - Random Containers for Reaper" package.\sa180\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 8.\tx360\tab Search for and install the "Random Containers for Reaper" package by "Simple Sound Tools"\sa180\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Running Random Containers for Reaper\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 1.\tx360\tab Open REAPER's Action List and search for the action "Script: Simple-Sound-Tools_Random-Containers.lua"\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 2.\tx360\tab Assign a keyboard shortcut if desired.\sa180\par}

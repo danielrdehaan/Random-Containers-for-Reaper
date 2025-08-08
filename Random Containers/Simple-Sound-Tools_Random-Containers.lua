@@ -1,6 +1,6 @@
 -- @description Random Containers for Reaper
 -- @author Simple Sound Tools
--- @version 2.0.B.0.1
+-- @version 2.0.B.002
 -- @about
 --   This script brings the essential functionality of audio middleware to Reaper
 -- @provides

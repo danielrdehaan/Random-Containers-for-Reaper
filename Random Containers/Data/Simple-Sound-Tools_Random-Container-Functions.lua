@@ -1406,7 +1406,7 @@ local function renderTakeRandomizationSection(ctx, changedParams)
                     local changedW, newVal = ImGui.SliderDouble(ctx, label, 
                         state.takeWeights[i] or 0, 
                         0, 100, 
-                        "%d%%"
+                        "%.2f%%"
                     )
                     if changedW then
                         state.takeWeights[i] = newVal

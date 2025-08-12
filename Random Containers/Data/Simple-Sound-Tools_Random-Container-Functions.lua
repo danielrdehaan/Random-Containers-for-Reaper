@@ -1853,16 +1853,16 @@ end
 function open_url_in_default_browser(url)
     local os_name = reaper.GetOS():lower()
 
-    if string.match(os_name, "Windows") then
+    if string.match(os_name, "windows") then
         os.execute(('start "" "%s"'):format(url))
         return true
-    elseif string.match(os_name, "OSX64") then -- macOS
+    elseif string.match(os_name, "osx64") then -- macOS
         os.execute(('open "%s"'):format(url))
         return true
-    elseif string.match(os_name, "macOS-arm64") then -- macOS
+    elseif string.match(os_name, "macos-arm64") then -- macOS
         os.execute(('open "%s"'):format(url))
         return true
-    elseif string.match(os_name, "Other") then
+    elseif string.match(os_name, "other") then
         os.execute(('xdg-open "%s"'):format(url))
         return true
     else

@@ -7,7 +7,7 @@
 -- 		[nomain] Fonts/Roboto/*.ttf
 -- 		[nomain] Data/*.lua
 -- @changelog
--- 		Added button to open developer website.
+-- 		Added button to open developer website to GUI.
 SCRIPT_FOLDER = 'Random Containers'
 r = reaper
 SEP = package.config:sub(1, 1)

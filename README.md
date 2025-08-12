@@ -1,4 +1,4 @@
-https://img.youtube.com/vi/GTxrmEj5frs/0.jpg)](https://youtu.be/GTxrmEj5frs?si=mKpRhymZN-J_Dc-s
+[![Watch the video](https://img.youtube.com/vi/GTxrmEj5frs/0.jpg)](https://youtu.be/GTxrmEj5frs?si=mKpRhymZN-J_Dc-s)
 
 # Requirements:
 This REAPER script requires:

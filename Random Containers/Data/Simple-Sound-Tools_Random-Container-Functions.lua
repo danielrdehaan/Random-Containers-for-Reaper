@@ -1851,14 +1851,20 @@ end
 -- Render Open Website Button
 ------------------------------------------------
 function open_url_in_default_browser(url)
-    local os_name = os.getenv("OS") or os.getenv("OSTYPE") -- Get OS type
+    local os_name = reaper.GetOS():lower()
 
     if string.match(os_name, "Windows") then
-        os.execute("start " .. url)
-    elseif string.match(os_name, "Darwin") then -- macOS
-        os.execute("open " .. url)
-    elseif string.match(os_name, "Linux") then
-        os.execute("xdg-open " .. url)
+        os.execute(('start "" "%s"'):format(url))
+        return true
+    elseif string.match(os_name, "OSX64") then -- macOS
+        os.execute(('open "%s"'):format(url))
+        return true
+    elseif string.match(os_name, "macOS-arm64") then -- macOS
+        os.execute(('open "%s"'):format(url))
+        return true
+    elseif string.match(os_name, "Other") then
+        os.execute(('xdg-open "%s"'):format(url))
+        return true
     else
         return false
     end

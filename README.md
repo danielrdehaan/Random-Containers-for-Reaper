@@ -1,3 +1,5 @@
+[![Watch the video](https://img.youtube.com/vi/GTxrmEj5frs/0.jpg)](https://youtu.be/GTxrmEj5frs?si=mKpRhymZN-J_Dc-s)
+
 # Requirements:
 This REAPER script requires:
  - REAPER 7.20+ (could work with older versions but has not been tested)

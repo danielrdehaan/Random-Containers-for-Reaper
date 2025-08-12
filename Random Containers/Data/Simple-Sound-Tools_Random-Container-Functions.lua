@@ -1847,6 +1847,49 @@ local function renderSettingsSection(ctx, changedParams)
 end
 
 
+------------------------------------------------
+-- Render Open Website Button
+------------------------------------------------
+function open_url_in_default_browser(url)
+    local os_name = os.getenv("OS") or os.getenv("OSTYPE") -- Get OS type
+
+    if string.match(os_name, "Windows") then
+        os.execute("start " .. url)
+    elseif string.match(os_name, "Darwin") then -- macOS
+        os.execute("open " .. url)
+    elseif string.match(os_name, "Linux") then
+        os.execute("xdg-open " .. url)
+    else
+        return false
+    end
+end
+
+
+local function renderOpenURLSection(ctx)
+    -- Push font for parameter text
+    ImGui.PushFont(ctx, font_Parameter)
+    ImGui.Separator(ctx)
+
+    -- Push custom colors for the button and its states
+    ImGui.PushStyleColor(ctx, ImGui.Col_Button, 0x282828FF)        -- Button Background
+    ImGui.PushStyleColor(ctx, ImGui.Col_ButtonHovered, 0x949494FF) -- Button Hover
+    ImGui.PushStyleColor(ctx, ImGui.Col_ButtonActive, 0x48B2A0FF)  -- Button Active
+    ImGui.PushStyleColor(ctx, ImGui.Col_Text, paramColor)          -- Button Text Color
+
+    -- Render the "Open Website" button
+    if ImGui.Button(ctx, "Open Website") then
+        ImGui.PopFont(ctx)         -- Pop the font
+        ImGui.PopStyleColor(ctx, 4) -- Pop the 4 pushed style colors
+        open_url_in_default_browser("https://www.simplesoundtools.com")
+        return false               -- Signal to close the window
+    end
+
+    -- Cleanup for font and style colors if the button is not clicked
+    ImGui.PopFont(ctx)
+    ImGui.PopStyleColor(ctx, 4)    -- Pop the 4 pushed style colors
+    return true                    -- Signal to keep the window open
+end
+
 
 ------------------------------------------------
 -- Render Close Button
@@ -2084,6 +2127,8 @@ local function MainLoop()
             ImGui.PopStyleColor(ctx)
             ImGui.PopFont(ctx)
         end
+
+        renderOpenURLSection(ctx)
 
         -- Render close button and check if the window should remain open
         if not renderCloseSection(ctx) then

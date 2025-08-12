@@ -89,6 +89,11 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Simple Sound Tools Website\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 {\field{\*\fldinst{HYPERLINK "https://www.simplesoundtools.com/"}}{\fldrslt{\ul
+https://www.simplesoundtools.com/
+}}}
+\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 Requirements:\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 This REAPER script requires:\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab REAPER 7.20+ (could work with older versions but has not been tested)\par}

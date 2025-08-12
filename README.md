@@ -1,8 +1,6 @@
-# Simple Sound Tools Website:
-[https://www.simplesoundtools.com/](https://www.simplesoundtools.com/)
-
-# Screenshots:
 ![Random Containers for Reaper V2](https://private-user-images.githubusercontent.com/30731451/477218897-f8c82917-1590-454a-b91c-b83e69bbc832.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTUwMjQzOTIsIm5iZiI6MTc1NTAyNDA5MiwicGF0aCI6Ii8zMDczMTQ1MS80NzcyMTg4OTctZjhjODI5MTctMTU5MC00NTRhLWI5MWMtYjgzZTY5YmJjODMyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA4MTIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwODEyVDE4NDEzMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWQ0YTAyZTFhNjk2Mzk3Y2Q2NTcyOTRmZTcwMjFkYjBjYWMzMjdmODgwNTE3YTViMjI5NTg0ZjM0M2Q0YWIxN2EmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.BEC_tUE4nJKafQyzvNgfc9ywBHEF9nGxttGVvCsHlzY)
+
+[https://www.simplesoundtools.com/](https://www.simplesoundtools.com/)
 
 # Requirements:
 This REAPER script requires:

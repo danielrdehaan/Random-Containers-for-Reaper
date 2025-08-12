@@ -10,9 +10,10 @@ This REAPER script requires:
  - Install script through ReaPack.
  - Repository Link: [https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/master/index.xml](https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/master/index.xml)
 
-# Full Installation Instructions:
-[![Watch the video](https://img.youtube.com/vi/GTxrmEj5frs/0.jpg)](https://youtu.be/GTxrmEj5frs?si=mKpRhymZN-J_Dc-s)
+# Installation & Basic Guide Video:
+[![Watch the video](https://img.youtube.com/vi/GTxrmEj5frs/maxresdefault.jpg)](https://youtu.be/GTxrmEj5frs?si=mKpRhymZN-J_Dc-s)
 
+# Full Installation Instructions:
 1. Download and install ReaPack from [https://reapack.com](https://reapack.com). 
 2. Restart REAPER after installing ReaPack.
 

@@ -1871,10 +1871,10 @@ function open_url_in_default_browser(url)
 end
 
 
-local function renderOpenURLSection(ctx)
+local function renderLinkSection(ctx)
     -- Push font for parameter text
     ImGui.PushFont(ctx, font_Parameter)
-    -- ImGui.Separator(ctx)
+    ImGui.Separator(ctx)
 
     -- Push custom colors for the button and its states
     ImGui.PushStyleColor(ctx, ImGui.Col_Button, 0x282828FF)        -- Button Background
@@ -1883,7 +1883,23 @@ local function renderOpenURLSection(ctx)
     ImGui.PushStyleColor(ctx, ImGui.Col_Text, paramColor)          -- Button Text Color
 
     -- Render the "Open Website" button
-    if ImGui.Button(ctx, "Open Developer Website...") then
+    if ImGui.Button(ctx, "❤️ Support this Developer!") then
+        ImGui.PopFont(ctx)         -- Pop the font
+        ImGui.PopStyleColor(ctx, 4) -- Pop the 4 pushed style colors
+        open_url_in_default_browser("https://www.buymeacoffee.com/danielrdehaan")
+        return false               -- Signal to close the window
+    end
+
+    -- Render the "Open Website" button
+    if ImGui.Button(ctx, "💬 Discord Server") then
+        ImGui.PopFont(ctx)         -- Pop the font
+        ImGui.PopStyleColor(ctx, 4) -- Pop the 4 pushed style colors
+        open_url_in_default_browser("https://discord.gg/C9FYD8Qf4g")
+        return false               -- Signal to close the window
+    end
+
+    -- Render the "Open Website" button
+    if ImGui.Button(ctx, "👉 Open Developer Website...") then
         ImGui.PopFont(ctx)         -- Pop the font
         ImGui.PopStyleColor(ctx, 4) -- Pop the 4 pushed style colors
         open_url_in_default_browser("https://www.simplesoundtools.com")
@@ -2135,14 +2151,13 @@ local function MainLoop()
         end
 
         
+        renderLinkSection(ctx)
 
         -- Render close button and check if the window should remain open
         if not renderCloseSection(ctx) then
             ImGui.End(ctx) -- End the ImGui frame before returning
             return
         end
-
-        renderOpenURLSection(ctx)
 
         ImGui.End(ctx)
     end

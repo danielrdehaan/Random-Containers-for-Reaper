@@ -1883,7 +1883,7 @@ local function renderLinkSection(ctx)
     ImGui.PushStyleColor(ctx, ImGui.Col_Text, paramColor)          -- Button Text Color
 
     -- Render the "Open Website" button
-    if ImGui.Button(ctx, "❤️ Support this Developer!") then
+    if ImGui.Button(ctx, "Support Developer") then
         ImGui.PopFont(ctx)         -- Pop the font
         ImGui.PopStyleColor(ctx, 4) -- Pop the 4 pushed style colors
         open_url_in_default_browser("https://www.buymeacoffee.com/danielrdehaan")
@@ -1891,7 +1891,7 @@ local function renderLinkSection(ctx)
     end
 
     -- Render the "Open Website" button
-    if ImGui.Button(ctx, "💬 Discord Server") then
+    if ImGui.Button(ctx, "Discord Server") then
         ImGui.PopFont(ctx)         -- Pop the font
         ImGui.PopStyleColor(ctx, 4) -- Pop the 4 pushed style colors
         open_url_in_default_browser("https://discord.gg/C9FYD8Qf4g")
@@ -1899,7 +1899,7 @@ local function renderLinkSection(ctx)
     end
 
     -- Render the "Open Website" button
-    if ImGui.Button(ctx, "👉 Open Developer Website...") then
+    if ImGui.Button(ctx, "Developer Website") then
         ImGui.PopFont(ctx)         -- Pop the font
         ImGui.PopStyleColor(ctx, 4) -- Pop the 4 pushed style colors
         open_url_in_default_browser("https://www.simplesoundtools.com")

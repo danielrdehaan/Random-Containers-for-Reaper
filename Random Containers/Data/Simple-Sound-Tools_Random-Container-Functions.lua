@@ -1848,7 +1848,51 @@ end
 
 
 ------------------------------------------------
--- Render Open Website Button
+-- Render Pack Take Folder Button
+------------------------------------------------
+local function renderPackTakeButton(ctx)
+
+    -- Push font for parameter text
+    ImGui.PushFont(ctx, font_Parameter)
+    ImGui.Separator(ctx)
+
+    -- Push custom colors for the button and its states
+    ImGui.PushStyleColor(ctx, ImGui.Col_Button, 0x282828FF)        -- Button Background
+    ImGui.PushStyleColor(ctx, ImGui.Col_ButtonHovered, 0x949494FF) -- Button Hover
+    ImGui.PushStyleColor(ctx, ImGui.Col_ButtonActive, 0x48B2A0FF)  -- Button Active
+    ImGui.PushStyleColor(ctx, ImGui.Col_Text, paramColor)          -- Button Text Color
+
+    -- Render the button to implode selected items on same track...
+    ImGui.Text(ctx, "Selected items on same track:")
+    ImGui.SameLine(ctx)
+    if ImGui.Button(ctx, "Create Random Container") then
+        ImGui.PopFont(ctx)         -- Pop the font
+        ImGui.PopStyleColor(ctx, 4) -- Pop the 4 pushed style colors
+        reaper.Main_OnCommand(40543, 0)
+        return false               -- Signal to close the window
+    end
+
+    -- Render the button to implode selected items on same track...
+    ImGui.Text(ctx, "Selected Items on across tracks:")
+    ImGui.SameLine(ctx)
+    if ImGui.Button(ctx, "Create Random Container") then
+        ImGui.PopFont(ctx)         -- Pop the font
+        ImGui.PopStyleColor(ctx, 4) -- Pop the 4 pushed style colors
+        reaper.Main_OnCommand(40438, 0)
+        return false               -- Signal to close the window
+    end
+
+    -- Cleanup for font and style colors if the button is not clicked
+    ImGui.PopFont(ctx)
+    ImGui.PopStyleColor(ctx, 4)    -- Pop the 4 pushed style colors
+    return true                    -- Signal to keep the window open
+
+end
+
+
+
+------------------------------------------------
+-- Render Links Section
 ------------------------------------------------
 function open_url_in_default_browser(url)
     local os_name = reaper.GetOS():lower()

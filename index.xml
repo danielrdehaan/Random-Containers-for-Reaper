@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="Simple Sound Tools" commit="5992011b48e1ab8c9f99d34326609346e13d84f3">
+<index version="1" name="Simple Sound Tools" commit="4f1f26384863c4cacd0a48de648400863b1c5aea">
   <category name="Random Containers">
     <reapack name="Simple-Sound-Tools_Random-Containers.lua" type="script" desc="Random Containers for Reaper">
       <metadata>
@@ -137,6 +137,13 @@
         <source file="Fonts/Roboto/Roboto-Black.ttf">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/5992011b48e1ab8c9f99d34326609346e13d84f3/Random%20Containers/Fonts/Roboto/Roboto-Black.ttf</source>
         <source file="Fonts/Roboto/Roboto-Medium.ttf">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/5992011b48e1ab8c9f99d34326609346e13d84f3/Random%20Containers/Fonts/Roboto/Roboto-Medium.ttf</source>
         <source file="Data/Simple-Sound-Tools_Random-Container-Functions.lua">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/5992011b48e1ab8c9f99d34326609346e13d84f3/Random%20Containers/Data/Simple-Sound-Tools_Random-Container-Functions.lua</source>
+      </version>
+      <version name="2.0.B.013" author="Simple Sound Tools" time="2025-08-14T22:00:58Z">
+        <changelog><![CDATA[Added button to pack selected items when items are selected.]]></changelog>
+        <source main="main">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/4f1f26384863c4cacd0a48de648400863b1c5aea/Random%20Containers/Simple-Sound-Tools_Random-Containers.lua</source>
+        <source file="Fonts/Roboto/Roboto-Black.ttf">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/4f1f26384863c4cacd0a48de648400863b1c5aea/Random%20Containers/Fonts/Roboto/Roboto-Black.ttf</source>
+        <source file="Fonts/Roboto/Roboto-Medium.ttf">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/4f1f26384863c4cacd0a48de648400863b1c5aea/Random%20Containers/Fonts/Roboto/Roboto-Medium.ttf</source>
+        <source file="Data/Simple-Sound-Tools_Random-Container-Functions.lua">https://github.com/danielrdehaan/Random-Containers-for-Reaper/raw/4f1f26384863c4cacd0a48de648400863b1c5aea/Random%20Containers/Data/Simple-Sound-Tools_Random-Container-Functions.lua</source>
       </version>
     </reapack>
   </category>

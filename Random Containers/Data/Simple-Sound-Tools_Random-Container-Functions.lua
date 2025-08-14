@@ -2186,6 +2186,7 @@ local function MainLoop()
             renderPanRandomizationSection(ctx, changedParams)
             renderPitchRandomizationSection(ctx, changedParams)
             -- renderSettingsSection(ctx, changedParams)
+            renderPackTakeButton(ctx)
         else
             ImGui.PushFont(ctx, font_Parameter)
             ImGui.PushStyleColor(ctx, ImGui.Col_Text, headingColor)

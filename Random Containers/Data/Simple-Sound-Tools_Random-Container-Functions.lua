@@ -1863,9 +1863,8 @@ local function renderPackTakeButton(ctx)
     ImGui.PushStyleColor(ctx, ImGui.Col_Text, paramColor)          -- Button Text Color
 
     -- Render the button to implode selected items on same track...
-    ImGui.Text(ctx, "Selected items on same track:")
-    ImGui.SameLine(ctx)
-    if ImGui.Button(ctx, "Create Random Container") then
+    ImGui.Text(ctx, "Create random container from selected items on...")
+    if ImGui.Button(ctx, "Same Track") then
         ImGui.PopFont(ctx)         -- Pop the font
         ImGui.PopStyleColor(ctx, 4) -- Pop the 4 pushed style colors
         reaper.Main_OnCommand(40543, 0)
@@ -1873,9 +1872,8 @@ local function renderPackTakeButton(ctx)
     end
 
     -- Render the button to implode selected items on same track...
-    ImGui.Text(ctx, "Selected Items on across tracks:")
     ImGui.SameLine(ctx)
-    if ImGui.Button(ctx, "Create Random Container") then
+    if ImGui.Button(ctx, "Across Tracks") then
         ImGui.PopFont(ctx)         -- Pop the font
         ImGui.PopStyleColor(ctx, 4) -- Pop the 4 pushed style colors
         reaper.Main_OnCommand(40438, 0)

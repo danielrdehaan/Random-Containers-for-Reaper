@@ -1849,7 +1849,6 @@ local function renderPackTakeButton(ctx)
 
     -- Push font for parameter text
     ImGui.PushFont(ctx, font_Parameter)
-    ImGui.Separator(ctx)
 
     -- Push custom colors for the button and its states
     ImGui.PushStyleColor(ctx, ImGui.Col_Button, 0x282828FF)        -- Button Background
@@ -1875,6 +1874,9 @@ local function renderPackTakeButton(ctx)
         return false               -- Signal to close the window
     end
 
+    -- Add separator when section visible
+    ImGui.Separator(ctx)
+    
     -- Cleanup for font and style colors if the button is not clicked
     ImGui.PopFont(ctx)
     ImGui.PopStyleColor(ctx, 4)    -- Pop the 4 pushed style colors

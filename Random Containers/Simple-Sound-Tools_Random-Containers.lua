@@ -1,13 +1,13 @@
 -- @description Random Containers for Reaper
 -- @author Simple Sound Tools
--- @version 2.0.B.015
+-- @version 2.0.B.016
 -- @about
 --   	This script brings the essential functionality of audio middleware to Reaper
 -- @provides
 -- 		[nomain] Fonts/Roboto/*.ttf
 -- 		[nomain] Data/*.lua
 -- @changelog
--- 		Moved pack take buttons to top of GUI.
+-- 		Moved pack take buttons to top of GUI to make them easier to find.
 SCRIPT_FOLDER = 'Random Containers'
 r = reaper
 SEP = package.config:sub(1, 1)

@@ -1318,11 +1318,6 @@ end
 
 
 
---------------------------------------------------------------------------------
--- 5) The Main GUI loop
---------------------------------------------------------------------------------
-
-
 ------------------------------------------------
 -- Take Randomization Section
 ------------------------------------------------
@@ -2177,6 +2172,7 @@ local function MainLoop()
 
         -- Check if items are selected
         if selCount > 0 then
+            renderPackTakeButton(ctx)
             renderTakeRandomizationSection(ctx, changedParams)
             renderTriggerProbabilitySection(ctx, changedParams)
             renderStartOffsetRandomizationSection(ctx, changedParams)
@@ -2184,7 +2180,6 @@ local function MainLoop()
             renderPanRandomizationSection(ctx, changedParams)
             renderPitchRandomizationSection(ctx, changedParams)
             -- renderSettingsSection(ctx, changedParams)
-            renderPackTakeButton(ctx)
         else
             ImGui.PushFont(ctx, font_Parameter)
             ImGui.PushStyleColor(ctx, ImGui.Col_Text, headingColor)

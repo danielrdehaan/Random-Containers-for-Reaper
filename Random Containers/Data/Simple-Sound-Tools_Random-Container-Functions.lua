@@ -1007,6 +1007,7 @@ local function addDefaultTagBlock(item)
 #rc_enableTakeRandomization(0)
 #rc_takeMode(Shuffle)
 #rc_takeWeights(100)
+#rc_shuffleNoRepeat(1)
 
 #---trigger---
 #rc_enableTriggerProbability(0)
@@ -1486,7 +1487,7 @@ local function renderTakeRandomizationSection(ctx, changedParams)
             ImGui.PushStyleColor(ctx, ImGui.Col_SliderGrab, 0x48B2A0FF)
             ImGui.PushStyleColor(ctx, ImGui.Col_SliderGrabActive, 0x50E3C2FF)
             local maxTakes = math.max(state.numTakes, 1)
-            local changedNR, newNR = ImGui.SliderInt(ctx, "No Repeat", state.shuffleNoRepeat or 1, 1, maxTakes)
+            local changedNR, newNR = ImGui.SliderInt(ctx, "Repeats", state.shuffleNoRepeat or 1, 1, maxTakes)
             if changedNR then
                 state.shuffleNoRepeat = newNR
                 changedParams.shuffleNoRepeat = true

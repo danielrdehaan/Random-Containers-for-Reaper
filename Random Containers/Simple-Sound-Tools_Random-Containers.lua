@@ -1,13 +1,13 @@
 -- @description Random Containers for Reaper
 -- @author Simple Sound Tools
--- @version 2.0.B.016
+-- @version 2.0.B.017
 -- @about
 --   	This script brings the essential functionality of audio middleware to Reaper
 -- @provides
 -- 		[nomain] Fonts/Roboto/*.ttf
 -- 		[nomain] Data/*.lua
 -- @changelog
--- 		Moved pack take buttons to top of GUI to make them easier to find.
+-- 		- Testing... New feature for Randomize Active Take that allows the user to specify the number of takes that must be played before a previously selected take can be retriggered.
 SCRIPT_FOLDER = 'Random Containers'
 r = reaper
 SEP = package.config:sub(1, 1)

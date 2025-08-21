@@ -17,8 +17,8 @@ local commandName = "_RS57fe93c86c48458c08bcf6d59856566422eb3160"
 local commandID   = reaper.NamedCommandLookup(commandName)
 
 local lastInsideState       = {} -- itemGUID -> bool
-local lastChosenTake        = nil
-local sequentialTakeIndices = {} -- itemGUID -> integer 
+local sequentialTakeIndices = {} -- itemGUID -> integer
+local shuffleHistory        = {} -- itemGUID -> {recent take indices}
 local lastPlayState         = -1
 
 ---------------------------------------------------------
@@ -197,29 +197,65 @@ local function getTakeMode(notes)
     return nil
 end
 
+local function getShuffleNoRepeat(notes)
+    local n = notes:match("#rc_shuffleNoRepeat%((%d+)%)")
+    n = tonumber(n)
+    if not n or n < 1 then return 1 end
+    return math.floor(n)
+end
+
 local function doShuffle(item)
     local takeCount = reaper.CountTakes(item)
     if takeCount <= 1 then
         reaper.SetActiveTake(reaper.GetMediaItemTake(item, 0))
-        lastChosenTake = 0
         return
     end
 
+    local guid   = getItemGUID(item)
+    local notes  = getItemNotes(item)
+    local N      = getShuffleNoRepeat(notes)
+    local history = shuffleHistory[guid] or {}
+
     local currentTakeIndex = reaper.GetMediaItemInfo_Value(item, "I_CURTAKE")
-    local newTake          = currentTakeIndex
-    local tries            = 0
-    while tries < 100 do
-        local candidate = math.random(0, takeCount - 1)
-        if candidate ~= currentTakeIndex and candidate ~= lastChosenTake then
-            newTake = candidate
-            break
+
+    local function buildCandidates()
+        local candidates = {}
+        for i = 0, takeCount - 1 do
+            local skip = (i == currentTakeIndex)
+            if not skip then
+                for _, h in ipairs(history) do
+                    if h == i then
+                        skip = true
+                        break
+                    end
+                end
+            end
+            if not skip then
+                table.insert(candidates, i)
+            end
         end
-        tries = tries + 1
+        return candidates
     end
 
+    local candidates = buildCandidates()
+    while #candidates == 0 and #history > 0 do
+        table.remove(history, 1)
+        candidates = buildCandidates()
+    end
+
+    if #candidates == 0 then
+        for i = 0, takeCount - 1 do
+            if i ~= currentTakeIndex then table.insert(candidates, i) end
+        end
+    end
+
+    local newTake = candidates[math.random(#candidates)]
     reaper.SetActiveTake(reaper.GetMediaItemTake(item, newTake))
     reaper.UpdateItemInProject(item)
-    lastChosenTake = newTake
+
+    table.insert(history, newTake)
+    while #history > N do table.remove(history, 1) end
+    shuffleHistory[guid] = history
 end
 
 local function doSequential(item)
@@ -708,6 +744,7 @@ local state = {
   enableTakeRandomization = false, -- Enable/disable take randomization
   takeMode                = 0,     -- 0=Shuffle, 1=Sequential, 2=Weighted
   takeWeights             = {},    -- E.g., {25, 25, 25, 25} for Weighted mode
+  shuffleNoRepeat         = 1,     -- #rc_shuffleNoRepeat(N)
 
   -- Trigger Probability
   enableTriggerProbability = false, -- Enable/disable trigger probability
@@ -751,6 +788,7 @@ local function parseItemNotes(notes, numTakes)
     enableTakeRandomization   = false,
     takeMode                  = 0,
     takeWeights               = {},
+    shuffleNoRepeat           = 1,
 
     -- Trigger Probability
     enableTriggerProbability  = false,
@@ -819,6 +857,11 @@ local function parseItemNotes(notes, numTakes)
       if #parsedWeights == numTakes then
         result.takeWeights = parsedWeights
       end
+    end
+
+    local noRepeat = line:match("^#rc_shuffleNoRepeat%(([^)]+)%)")
+    if noRepeat then
+      result.shuffleNoRepeat = tonumber(noRepeat) or 1
     end
 
     -- Trigger Probability
@@ -1134,6 +1177,11 @@ local function applyParametersToItem(item, st, changedParams)
         end
     end
 
+    if changedParams.shuffleNoRepeat then
+        newNotes = setOrReplaceTag(newNotes, "^#rc_shuffleNoRepeat%([^)]*%)",
+            string.format("#rc_shuffleNoRepeat(%d)", math.floor(st.shuffleNoRepeat or 1)))
+    end
+
     --------------------------------------------------------------------------------
     -- Trigger Probability Tags
     --------------------------------------------------------------------------------
@@ -1428,6 +1476,22 @@ local function renderTakeRandomizationSection(ctx, changedParams)
                 -- Pop slider styles
                 ImGui.PopStyleColor(ctx, 5)
             end
+            ImGui.Separator(ctx)
+        end
+
+        if state.takeMode == 0 then
+            ImGui.PushStyleColor(ctx, ImGui.Col_FrameBg, 0x282828FF)
+            ImGui.PushStyleColor(ctx, ImGui.Col_FrameBgHovered, 0x949494FF)
+            ImGui.PushStyleColor(ctx, ImGui.Col_FrameBgActive, 0x48B2A0FF)
+            ImGui.PushStyleColor(ctx, ImGui.Col_SliderGrab, 0x48B2A0FF)
+            ImGui.PushStyleColor(ctx, ImGui.Col_SliderGrabActive, 0x50E3C2FF)
+            local maxTakes = math.max(state.numTakes, 1)
+            local changedNR, newNR = ImGui.SliderInt(ctx, "No Repeat", state.shuffleNoRepeat or 1, 1, maxTakes)
+            if changedNR then
+                state.shuffleNoRepeat = newNR
+                changedParams.shuffleNoRepeat = true
+            end
+            ImGui.PopStyleColor(ctx, 5)
             ImGui.Separator(ctx)
         end
     end

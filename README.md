@@ -1,4 +1,4 @@
-[![Random Containers for Reaper V2](https://images.squarespace-cdn.com/content/v1/6813983fb7a5aa45bda98a99/e15bfafa-0c25-4980-baef-6379cd1aee9d/2025-05-01_11-20-00.png)
+[![Random Containers for Reaper V2](https://www.simplesoundtools.com/images/random-container-editor.webp)
 
 # Requirements:
 This REAPER script requires:
